@@ -1,0 +1,66 @@
+.inbox-view {
+  background-color: $stable;
+
+  .item {
+    h2 {
+      margin: 19px 0 2px 0;
+    }
+  }
+}
+
+.news-view {
+  background-color: $stable;
+
+  .photo {
+    width: 100%;
+    text-align: center;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .text {
+    padding: 0px 10px;
+
+    h2 {
+      text-align: center;
+    }
+
+    p {
+      &.date {
+        width: 100%;
+        text-align: center;
+        color: #666;
+      }
+
+      .description {
+
+      }
+    }
+  }
+}
+
+.poll-view {
+
+  .item {
+    &.title {
+      text-align: center;
+      background-color: $light;
+      color: $royal;
+    }
+
+    overflow: visible;
+    white-space: normal;
+  }
+
+  .error-message {
+    color: red;
+    text-align: center;
+    width: 100%
+  }
+
+  .button-section {
+    text-align: center;
+  }
+}

@@ -1,0 +1,87 @@
+<ion-view class="pharmacy-view">
+    <ion-content>
+
+        <div class="row pharmacy-section">
+            <div class="col">
+                <div class="item item-thumbnail-left">
+                    <img ng-src="{{photo}}">
+                    <h2><a href="tel: {{phone}}" class="button button-outline button-icon ion-ios-telephone-outline icon-left button-calm">{{phone}}</a></h2>
+                    <p></p>
+                </div>
+                <div class="pharmacy-title">
+                    <div class="title">{{name}}</div>
+                    <div class="address">{{distrito}} {{canton}}, {{provincia}}</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row schedule-section">
+            <div class="col">
+                <div class="schedule-title">
+                    <h4>Schedule</h4>
+                </div>
+
+                <div class="row schedule-row">
+                    <div class="col schedule-col" ng-repeat="day in schedule track by $index">
+                        <span class="day">{{dayOfWeek[$index]}}:</span><span>{{day.startTime}} - {{day.closeTime}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row service-section">
+            <div class="col">
+                <div class="service-title">
+                    <h4>Services</h4>
+                </div>
+
+                <div class="row service-row">
+                        <div class="col service-col" ng-repeat="service in services">
+                            <i class="icon ion-ios-checkmark-empty"></i> {{service}}
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row plan-section" ng-if="activePlans.length>0">
+            <div class="col">
+                <div class="section-title">
+                    <h3>ACTIVE PLANS</h3>
+                </div>
+
+                <div class="list card" ng-repeat="plan in activePlans">
+                    <div class="item item-image" ng-if="plan.photo">
+                        <img ng-src="{{plan.photo}}">
+                    </div>
+
+                    <div class="item text">
+                        <h2>{{plan.title}}</h2>
+                        <p>{{plan.description}}</p>
+                        <p>{{plan.dateInit.toLocaleString()}} - {{plan.dateEnd.toLocaleString()}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row promotion-section" ng-if="activePromotions.length>0">
+            <div class="col">
+                <div class="section-title">
+                    <h3>ACTIVE PROMOTIONS</h3>
+                </div>
+
+                <div class="list card" ng-repeat="promotion in activePromotions">
+                    <div class="item item-image" ng-if="promotion.photo">
+                        <img ng-src="{{promotion.photo}}">
+                    </div>
+
+                    <div class="item text">
+                        <h2>{{promotion.title}}</h2>
+                        <p>{{promotion.description}}</p>
+                        <p>{{promotion.dateInit.toLocaleString()}} - {{promotion.dateEnd.toLocaleString()}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

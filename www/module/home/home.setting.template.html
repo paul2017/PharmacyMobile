@@ -1,0 +1,43 @@
+<ion-view class="setting-view">
+    <ion-content>
+
+        <form name="settingForm" novalidate>
+            <div class="list">
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Name</span>
+                    <input type="text" placeholder="" ng-model="auth.name" required>
+                </label>
+
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Last Name</span>
+                    <input type="text" placeholder="" ng-model="auth.lastname" required>
+                </label>
+
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Telephone</span>
+                    <input type="tel" placeholder="" ng-model="auth.phone" required>
+                </label>
+
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Email</span>
+                    <input type="email" placeholder="" ng-model="auth.email" required>
+                </label>
+
+                <div class="row" ng-show="error">
+                    <div class="col error-message" ng-bind-html="errorMessage">
+                    </div>
+                </div>
+            </div>
+
+            <div class="padding">
+                <button class="button button-full button-balanced" ng-click="changePassword()">Change password</button>
+                <button class="button button-full button-calm" ng-click="save()" ng-disabled="settingForm.$invalid">Save</button>
+            </div>
+        </form>
+
+        <div class="padding">
+            <button class="button button-full button-assertive" ng-click="logout()">Logout</button>
+        </div>
+
+    </ion-content>
+</ion-view>

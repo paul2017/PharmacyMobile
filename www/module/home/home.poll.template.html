@@ -1,0 +1,53 @@
+<ion-view class="poll-view">
+
+    <ion-content ng-show="readyToShow">
+
+        <div class="list">
+            <div class="item item-divider title">{{poll.title}}</div>
+
+            <div ng-repeat="question in poll.questions track by $index">
+                <div class="item item-divider">
+                    {{poll.questions[$index][0]}}
+                </div>
+
+                <div class="item" ng-if="poll.answers[$index] >= 0 && readOnly">
+                    {{poll.questions[$index][poll.answers[$index]+1]}}
+                </div>
+
+                <div ng-if="!readOnly">
+                    <ion-radio name="{{question[0]}}" id="{{question[0]}}"
+                               ng-if="$index > 0"
+                               ng-repeat="answer in question track by $index"
+                               ng-value="$index-1"
+                               ng-model="poll.answers[$parent.$parent.$index]">
+                        {{question[$index]}}
+                    </ion-radio>
+                </div>
+            </div>
+
+            <label class="item item-input item-stacked-label" ng-if="!readOnly">
+                <span class="input-label">Comentarios</span>
+                <input type="text" placeholder="" ng-model="poll.comment" ng-readonly="readOnly">
+            </label>
+
+            <div class="item item-divider" ng-if="readOnly && poll.comment && poll.comment!=''">
+                Comentarios
+            </div>
+            <div class="item" ng-if="readOnly && poll.comment && poll.comment!=''">
+                {{poll.comment}}
+            </div>
+
+            <div class="row" ng-show="error">
+                <div class="col error-message" ng-bind-html="errorMessage">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="button-section padding" ng-if="!readOnly && poll.enableAnswer">
+            <button class="button button-full button-calm" ng-click="save()">Save</button>
+        </div>
+
+    </ion-content>
+
+</ion-view>

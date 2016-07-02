@@ -1,0 +1,27 @@
+<ion-view class="promotion-view">
+    <ion-content>
+
+        <div>
+            <div class="list card" ng-repeat="promotion in activePromotions">
+                <div class="item item-image" ng-if="promotion.photo">
+                    <img ng-src="{{promotion.photo}}">
+                </div>
+
+                <div class="item text">
+                    <h2>{{promotion.title}}</h2>
+                    <p>{{promotion.description}}</p>
+                    <p>{{promotion.pharmacyName}}</p>
+                    <p>{{promotion.dateInit.toLocaleString()}} - {{promotion.dateEnd.toLocaleString()}}</p>
+                </div>
+
+                <div class="navigation">
+                    <p>{{promotion.distance}}</p>
+                    <button class="button button-round button-float button-energized" ng-click="goWaze(promotion.pharmacyLat, promotion.pharmacyLng)">
+                        <i class="icon ion-ios-navigate-outline"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

@@ -1,0 +1,60 @@
+.promotion-view {
+  background-color: $calm;
+
+  .card {
+    background-color: $calm;
+    box-shadow: none;
+    padding-bottom: 28px;
+  }
+
+  .item {
+    &.item-image {
+      background-color: $calm;
+    }
+
+    &.text {
+      padding-bottom: 44px;
+    }
+
+    h2 {
+      color: $calm;
+      font-size: 20px;
+    }
+  }
+
+  .navigation {
+    position: absolute;
+    width: 100%;
+    height: 62px;
+     margin-top: -44px;
+    z-index: 11 !important;
+
+    text-align: center;
+
+    p {
+      margin-bottom: 0px;
+      font-size: 11px;
+      line-height: 15px;
+      color: $energized;
+    }
+
+    .button {
+      position: relative;
+    }
+  }
+  /*
+  .distance {
+    position: absolute;
+    z-index: 12 !important;
+    font-size: 10px;
+    color: $energized;
+
+    right: 16px;
+    margin-top: -30px;
+  }
+  .button {
+    right: 16px;
+    margin-top: -26px;
+  }
+  */
+}

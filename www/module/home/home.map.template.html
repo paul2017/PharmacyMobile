@@ -1,0 +1,17 @@
+<ion-view class="map-view">
+
+    <ion-content scroll="false">
+
+        <div class="search-box">
+            <label class="item item-input item-calm item-button-right">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="text" placeholder="" ng-model="search.keyword">
+            </label>
+            <button class="button button-small" ng-click="goSearch()">
+                <i class="icon ion-forward"></i>
+            </button>
+        </div>
+        <div id="map_canvas" data-tap-disabled="true"></div>
+    </ion-content>
+
+</ion-view>

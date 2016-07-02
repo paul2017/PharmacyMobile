@@ -1,0 +1,26 @@
+{
+	"START": "iniciar",
+	"LOCATES": "Localiza",
+	"FAIL": "Aprovecha",
+	"SHARE": "Comparte",
+	"NOTIFICATIONS": "Notifiaciones",
+	
+	"MANUAL_REGISTRATION": "RESISTRO MANUAL",
+	
+	"REGISTER": "Register",
+	"LOGIN": "Login",
+	
+	"NAME": "Name",
+	"LAST_NAME": "Last Name",
+	"TELEPHONE": "Telephone",
+	"EMAIL": "Email",
+	"PASSWORD": "Password",
+	
+	"RESISTER_SOCIAL": "REGISTRO CON SOCIALES",
+	"START_SOCIAL": "INICIAR CON REDES SOCIALES",
+	
+	"MAP": "MAPA",
+	"PROMOTION": "PROMOTION",
+	"INBOX": "INBOX",
+	"SETTING": "AJUSTE"
+}

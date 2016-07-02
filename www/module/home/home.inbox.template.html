@@ -1,0 +1,14 @@
+<ion-view class="inbox-view">
+    <ion-content>
+
+        <div class="list" ng-show="readyToShow">
+            <a class="item item-thumbnail-left item-icon-right" ng-repeat="article in allNewsPoll track by $index" ng-click="goArticle($index)">
+                <img ng-src="{{article.photo}}">
+                <h2 class="title">{{article.title}}</h2>
+                <p>{{article.dateEnd.toLocaleString()}}</p>
+                <i class="icon ion-ios-arrow-forward"></i>
+            </a>
+        </div>
+
+    </ion-content>
+</ion-view>

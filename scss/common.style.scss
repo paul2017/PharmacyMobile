@@ -1,0 +1,48 @@
+.button-round {
+  border-radius: 50% !important;
+  width: 52px;
+  height: 52px;
+}
+
+.button-float {
+  z-index: 12 !important;
+  position: absolute;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26) !important;
+  -webkit-transform: translate3d(0, 0, 0) !important;
+  transform: translate3d(0, 0, 0) !important;
+  -webkit-transition: 0.2s linear !important;
+  transition: 0.2s linear !important;
+  -webkit-transition-property: -webkit-transform, all !important;
+  transition-property: transform, all !important;
+}
+
+.button-float:hover {
+  -webkit-transform: translate3d(0, -1px, 0) !important;
+  transform: translate3d(0, -1px, 0) !important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4) !important;
+}
+
+// Place holder text color
+::-webkit-input-placeholder { /* Safari, Chrome and Opera */
+  color: $stable !important;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: $stable !important;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+  color: $stable !important;
+}
+
+:-ms-input-placeholder { /* IE 10+ */
+  color: $stable !important;
+}
+
+::-ms-input-placeholder { /* Edge */
+  color: $stable !important;
+}
+
+:placeholder-shown { /* Standard one last! */
+  color: $stable !important;
+}

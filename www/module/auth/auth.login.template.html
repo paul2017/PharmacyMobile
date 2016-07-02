@@ -1,0 +1,52 @@
+<ion-view class="auth login-view">
+    <ion-content>
+        <div class="app-logo">
+            <img src="img/auth-logo.svg">
+        </div>
+
+        <div class="auth-form">
+            <form name="authorizationForm" novalidate="">
+
+                <div class="row">
+                    <div class="col">
+                        <div class="input-icon">
+                            <label class="item item-icon-left item-input">
+                                <i class="icon ion-ios-email-outline"></i>
+                                <input type="email" placeholder="{{ 'EMAIL' | translate }}" ng-model="auth.email" required>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="input-icon">
+                            <label class="item item-icon-left item-input">
+                                <i class="icon ion-ios-locked-outline"></i>
+                                <input type="password" placeholder=" {{ 'PASSWORD' | translate }}" ng-model="auth.password" required>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <button class="button button-full button-light button-submit" ng-click="doLogin()">Login</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+        <div class="social">
+            {{ 'START_SOCIAL' | translate }}
+
+            <div class="buttons">
+                <button class="button button-round" ng-click="doFacebookLogin()">
+                    <i class="icon ion-social-facebook"></i>
+                </button>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

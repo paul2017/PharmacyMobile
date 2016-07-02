@@ -1,0 +1,26 @@
+{
+	"START": "start",
+	"LOCATES": "Locates",
+	"FAIL": "Fail",
+	"SHARE": "Share",
+	"NOTIFICATIONS": "Notifications",
+	
+	"MANUAL_REGISTRATION": "MANUAL REGISTRATION",
+	
+	"REGISTER": "Register",
+	"LOGIN": "Login",
+	
+	"NAME": "Name",
+	"LAST_NAME": "Last Name",
+	"TELEPHONE": "Telephone",
+	"EMAIL": "Email",
+	"PASSWORD": "Password",
+	
+	"RESISTER_SOCIAL": "REGISTER WITH SOCIAL NETWORKS",
+	"START_SOCIAL": "START WITH SOCIAL NETWORKS",
+	
+	"MAP": "MAP",
+	"PROMOTION": "PROMOTION",
+	"INBOX": "INBOX",
+	"SETTING": "SETTING"
+}

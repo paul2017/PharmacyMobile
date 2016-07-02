@@ -1,0 +1,20 @@
+.tabs-home {
+
+  .tabs {
+    top: 0px;
+    padding-top: 30px;
+    height: 93px;
+    border-bottom: none;
+
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.platform-ios.platform-cordova:not(.fullscreen) .tabs-top {
+  &.tabs-home {
+    .tabs {
+      top: 0px;
+    }
+  }
+}
+
